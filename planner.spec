@@ -33,6 +33,7 @@ Devel files for %{name}.
 
 %prep
 %setup -n planner-%{version}
+sed -i  "s|@PLUGINDIR@|\"/opt/3rd-party/bundles/clearfraction/usr/lib64/com.github.alainm23.planner/plugins\"|" src/config.vala.in
 
 %build
 export LANG=C.UTF-8
